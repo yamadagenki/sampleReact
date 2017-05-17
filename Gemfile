@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
@@ -61,6 +60,7 @@ group :development, :test, :staging do
 end
 
 group :development do
+  gem 'foreman'
   gem 'rack-mini-profiler'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
